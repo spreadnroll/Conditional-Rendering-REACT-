@@ -1,4 +1,5 @@
 import { AlertClock } from "./Alertclock";
+import { Clock } from "./Clock";
 import { CounterDisplay } from "./CounterDisplay";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
@@ -15,6 +16,8 @@ export function App() {
       <AlertClock />
 
       <CounterDisplay />
+
+      <Clock />
     </div>
   );
 }
