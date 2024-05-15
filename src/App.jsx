@@ -2,8 +2,10 @@ import { AlertClock } from "./Alertclock";
 import { Clock } from "./Clock";
 import { CounterDisplay } from "./CounterDisplay";
 import { Hello } from "./Hello";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
+import { MyForm } from "./MyForm";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -20,6 +22,13 @@ export function App() {
 
       <Clock />
       <MouseClicker />
+
+
+      <InteractiveWelcome />
+
+      <MyForm />
+
+      
     </div>
   );
 }
