@@ -3,6 +3,7 @@ import { Clock } from "./Clock";
 import { CounterDisplay } from "./CounterDisplay";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
+import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
       <CounterDisplay />
 
       <Clock />
+      <MouseClicker />
     </div>
   );
 }
