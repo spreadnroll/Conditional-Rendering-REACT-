@@ -6,6 +6,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
 import { MyForm } from "./MyForm";
+import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -27,6 +28,8 @@ export function App() {
       <InteractiveWelcome />
 
       <MyForm />
+
+      <MyUncontrolledLogin />
 
       
     </div>
