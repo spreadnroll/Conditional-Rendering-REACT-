@@ -5,7 +5,7 @@ import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
-import { MyForm } from "./MyForm";
+import { MyControlledForm } from "./MyControlledForm";
 import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
 import { Welcome } from "./Welcome";
 
@@ -27,7 +27,7 @@ export function App() {
 
       <InteractiveWelcome />
 
-      <MyForm />
+      <MyControlledForm />
 
       <MyUncontrolledLogin />
 

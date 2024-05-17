@@ -8,7 +8,7 @@ function createData() {
   };
 }
 
-export function MyForm() {
+export function MyControlledForm() {
   const [data, setData] = useState(createData);
 
   const mountedRef = useRef(false);
