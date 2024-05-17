@@ -4,7 +4,7 @@ import { CounterDisplay } from "./CounterDisplay";
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Message } from "./Message";
-import { MouseClicker } from "./MouseClicker";
+import { MouseClicker } from "./MouseClickerHANDLINGEVENTS";
 import { MyControlledForm } from "./MyControlledForm";
 import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
 import { Welcome } from "./Welcome";
