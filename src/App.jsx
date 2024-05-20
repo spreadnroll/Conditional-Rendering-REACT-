@@ -10,6 +10,7 @@ import { MouseClicker } from "./MouseClickerHANDLINGEVENTS";
 import { MyControlledForm } from "./MyControlledForm";
 import { MyList } from "./MyList";
 import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
+import { Todolist } from "./Todolist";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -47,6 +48,8 @@ export function App() {
         {id: 3, name: 'white'},
         {id: 4, name: 'yellow'},
       ]} />
+
+      <Todolist initialTodos = {['Cook', 'Sleep', 'Play Music', 'Sport']} />
       
     </div>
   );
