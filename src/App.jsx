@@ -15,7 +15,7 @@ import { Welcome } from "./Welcome";
 
 export function App() {
   return (
-    <div>
+    <div className="app">
       <Hello />
       <Message />
       <hr />

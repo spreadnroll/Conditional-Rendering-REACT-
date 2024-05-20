@@ -1,6 +1,11 @@
 export function Welcome({ name, age }) {
+const WelcomeStyle = {
+  backgroundColor: 'greenyellow',
+  color: '#333',
+}
+
   return (
-    <div>
+    <div style={WelcomeStyle}>
       <h2>Welcome, {name}!</h2>
       {age > 18 && <p>Your age is {age}!</p>}
       {age ? <p>Your age is {age}!</p> : null}
