@@ -2,6 +2,7 @@ import { AlertClock } from "./Alertclock";
 import { Clock } from "./Clock";
 import { Color } from "./Color";
 import { Colors } from "./Colors";
+import { Container } from "./Container";
 import { CounterDisplay } from "./CounterDisplay";
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
@@ -11,11 +12,12 @@ import { MyControlledForm } from "./MyControlledForm";
 import { MyList } from "./MyList";
 import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
 import { Todolist } from "./Todolist";
+import { Todolist2 } from "./Todolist2";
 import { Welcome } from "./Welcome";
 
 export function App() {
   return (
-    <div className="app">
+    <Container title={<h1>My Page to try</h1>}>
       <Hello />
       <Message />
       <hr />
@@ -51,6 +53,10 @@ export function App() {
 
       <Todolist initialTodos = {['Cook', 'Sleep', 'Play Music', 'Sport']} />
       
-    </div>
+
+<Todolist2 />
+
+    </Container>
+    
   );
 }
