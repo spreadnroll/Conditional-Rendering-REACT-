@@ -8,7 +8,7 @@ function createData() {
   };
 }
 
-export function MyControlledForm() {
+export function ControlledForm2() {
   const [data, setData] = useState(createData);
 
   const mountedRef = useRef(false);
@@ -52,7 +52,7 @@ export function MyControlledForm() {
 
   return (
     <form onSubmit={handleLogin}>
-      <h3>My Form:</h3>
+      <h1>Controlled Form - 2</h1>
       <input
         ref={inputRef}
         name="username"

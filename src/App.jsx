@@ -8,7 +8,7 @@ import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClickerHANDLINGEVENTS";
-import { MyControlledForm } from "./MyControlledForm";
+import { ControlledForm2 } from "./ControlledForm2";
 import { MyList } from "./MyList";
 import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
 import { Todolist } from "./Todolist";
@@ -33,7 +33,7 @@ export function App() {
 
       <InteractiveWelcome />
 
-      <MyControlledForm />
+      <ControlledForm2 />
 
       <MyUncontrolledLogin />
 
