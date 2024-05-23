@@ -20,14 +20,18 @@ import { useState } from "react";
 export function App() {
 const [language, setLanguage] = useState('en')
 
-function handleSetLanguage(language) {
-  setLanguage(language)
+function handleSetLanguage(event) {
+  setLanguage(event.target.value)
 }
 
   return (
     <div>
-      <button onClick={() => handleSetLanguage('it')}>IT</button>
-      <button onClick={() => handleSetLanguage('en')}>EN</button>
+      <select onChange={handleSetLanguage} value={language}>
+      <option value={'it'}>IT</option>
+      <option value={'en'}>EN</option>
+
+      </select>
+      
  <Container title={<h1>My Page to try</h1>}>
       <LanguageContext.Provider value={language}>
       <Hello />
