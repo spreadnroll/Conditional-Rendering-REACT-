@@ -1,22 +1,26 @@
-import { useEffect, useState } from "react";
-import classes from './Clock.module.scss'
-
-
+import { useContext, useEffect, useState } from "react";
+import classes from "./Clock.module.scss";
+import { LanguageContext } from "./LanguageContext";
 
 export function Clock() {
-    const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
+  const language = useContext(LanguageContext);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setDate(new Date());
-        }, 1000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setDate(new Date());
+    }, 1000);
 
-        return () => clearInterval(intervalId);
-    }, [date]); 
+    return () => clearInterval(intervalId);
+  }, [date]);
 
-    return (
-        <div className={classes.clockColor}>
-            <h2>Current Time: {date.toLocaleTimeString()}</h2>
-        </div>
-    );
+  return (
+    <div className={classes.clockColor}>
+      <h2>
+        {language === "en"
+          ? `The Actually Current Time is: ${date.toLocaleTimeString()}`
+          : `L'ora corrente è: ${date.toLocaleTimeString()}`}
+      </h2>
+    </div>
+  );
 }

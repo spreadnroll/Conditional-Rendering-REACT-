@@ -14,10 +14,22 @@ import { MyUncontrolledLogin } from "./MyUncontrolledLogin";
 import { Todolist } from "./Todolist";
 import { Todolist2 } from "./Todolist2";
 import { Welcome } from "./Welcome";
+import { LanguageContext } from "./LanguageContext";
+import { useState } from "react";
 
 export function App() {
+const [language, setLanguage] = useState('en')
+
+function handleSetLanguage(language) {
+  setLanguage(language)
+}
+
   return (
-    <Container title={<h1>My Page to try</h1>}>
+    <div>
+      <button onClick={() => handleSetLanguage('it')}>IT</button>
+      <button onClick={() => handleSetLanguage('en')}>EN</button>
+ <Container title={<h1>My Page to try</h1>}>
+      <LanguageContext.Provider value={language}>
       <Hello />
       <Message />
       <hr />
@@ -55,8 +67,11 @@ export function App() {
       
 
 <Todolist2 />
+      </LanguageContext.Provider>
 
     </Container>
+    </div>
+   
     
   );
 }
