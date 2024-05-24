@@ -16,8 +16,8 @@ import { Todolist } from "./Todolist";
 import { Todolist2 } from "./Todolist2";
 import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
-import { GithubUser } from "./GithubUser"; // Ensure the path is correct
-import { GithubUsers } from "./GithubUsers"; // Ensure the path is correct
+import { GithubUser } from "./GithubUser";
+import { GithubUsers } from "./GithubUsers";
 
 export function App() {
   const [language, setLanguage] = useState("en");

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GithubUser } from "./GithubUser"; 
+import { GithubUser } from "./GithubUser"; // Ensure the path is correct
 
 export function GithubUsers() {
   const [username, setUsername] = useState("");
