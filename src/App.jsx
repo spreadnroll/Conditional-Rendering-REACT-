@@ -18,6 +18,7 @@ import { Welcome } from "./Welcome";
 import { LanguageContext } from "./LanguageContext";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
+import { LocationComponent } from "./LocationComponent";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -67,6 +68,7 @@ export function App() {
           <Todolist initialTodos={["Cook", "Sleep", "Play Music", "Sport"]} />
           <Todolist2 />
         </LanguageContext.Provider>
+        <LocationComponent />
       </Container>
     </div>
   );
