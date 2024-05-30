@@ -1,35 +1,21 @@
-import { useState } from "react";
-import { GithubUser } from "./GithubUser"; // Ensure the path is correct
+import React from 'react';
+import { useGithubUsers } from './useGithubUsers';
 
 export function GithubUsers() {
-  const [username, setUsername] = useState("");
-  const [usernames, setUsernames] = useState([]);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (username.trim() !== "" && !usernames.includes(username)) {
-      setUsernames([...usernames, username]);
-    }
-    setUsername("");
-  };
+  const { users, error, isLoading, onRefresh } = useGithubUsers();
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Enter GitHub username"
-        />
-        <button type="submit">Search</button>
-      </form>
-
-      <div>
-        {usernames.map((username) => (
-          <GithubUser key={username} username={username} />
-        ))}
-      </div>
+      <button onClick={onRefresh}>Refresh</button>
+      {isLoading && <h3>Loading...</h3>}
+      {error && <h3>An error occurred: {error.message}</h3>}
+      {users && (
+        <ul>
+          {users.map(user => (
+            <li key={user.id}>{user.login}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

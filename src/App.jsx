@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import { Container } from './Container';
 import { Welcome } from './Welcome';
-import { MyUncontrolledLogin } from './MyUncontrolledLogin';
-import { Link, Route, Routes } from 'react-router-dom';
 import { Catalogue } from './Catalogue';
 import { Product } from './Product';
 import { Counter } from './Counter';
-import { GithubUser } from './GithubUser';
 import { ShowGithubUser } from './ShowGithubUser';
-import { GithubUserList } from './GithubUserList';
+import { GithubUsers } from './GithubUsers';
 
 export function App() {
   const [language, setLanguage] = useState('en');
@@ -29,7 +27,7 @@ export function App() {
           <div>
             <h1>My Awesome App</h1>
             <div>
-              <Link to="/">Home</Link> | <Link to="/products">Products</Link> | <Link to="/counter">Counter</Link> |  <Link to="/users">Users</Link> | <Link to="/users/spreadnroll">User</Link>
+              <Link to="/">Home</Link> | <Link to="/products">Products</Link> | <Link to="/counter">Counter</Link> | <Link to="/users">Users</Link> | <Link to="/users/spreadnroll">My User</Link>
             </div>
           </div>
         }
@@ -39,7 +37,7 @@ export function App() {
           <Route path="/products" element={<Catalogue />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/counter" element={<Counter />} />
-          <Route path="/users" element={<GithubUserList />} />
+          <Route path="/users" element={<GithubUsers />} />
           <Route path="/users/:username" element={<ShowGithubUser />} />
           <Route path="*" element={
             <div>

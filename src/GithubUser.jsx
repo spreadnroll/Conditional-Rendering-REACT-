@@ -1,17 +1,20 @@
-import { useGithubUser } from "./useGithubUser";
-import React from "react";
+import React from 'react';
+import useSWR from 'swr';
+
+const fetcher = url => fetch(url).then(response => response.json());
 
 export function GithubUser({ username }) {
-  const { data, loading, error } = useGithubUser(username);
+  const { data, error, isLoading } = useSWR(`https://api.github.com/users/${username}`, fetcher);
+
+  if (isLoading) return <h3>Loading...</h3>;
+  if (error) return <h3>An error occurred: {error.message}</h3>;
 
   return (
     <div>
-      {loading && <h1>Loading...</h1>}
-      {error && <h1>There has been an error: {error.message}</h1>}
       {data && (
         <div>
-          <h1>{data.name}, {data.login}</h1>
-          <img src={data.avatar_url} alt="Avatar User" />
+          <h2>{data.login}</h2>
+          <p>{data.bio}</p>
         </div>
       )}
     </div>
