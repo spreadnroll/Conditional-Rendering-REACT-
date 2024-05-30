@@ -1,26 +1,16 @@
-import { useState } from "react"
+import { useState } from 'react';
 
 export function useCounter(initialValue = 0) {
-    const [counter, setCounter] = useState(initialValue)
-    function handleCounterIncrement() {
-        // setCounter(counter + 1)
-        setCounter((c) => c + 1)
-    }
-    
-    function handleCounterDecrement() {
-        // setCounter(counter - 1)
-        setCounter((c) => c - 1)
-    }
-    
-    function handleCounterReset() {
-        setCounter(initialValue)
-    }
+    const [counter, setCounter] = useState(initialValue);
+
+    const handleCounterIncrement = () => setCounter((c) => c + 1);
+    const handleCounterDecrement = () => setCounter((c) => c - 1);
+    const handleCounterReset = () => setCounter(initialValue);
 
     return {
-        counter: counter,
+        counter,
         onIncrement: handleCounterIncrement,
         onDecrement: handleCounterDecrement,
         onReset: handleCounterReset,
-    }
-    
+    };
 }
